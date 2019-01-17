@@ -412,17 +412,19 @@
     if (json[@"transparency"]) {
         material.transparency = [json[@"transparency"] floatValue];
     }
-    
+
+    if (json[@"transparent"]) {
+        [self setMaterialPropertyContents:json[@"transparent"] material:material.transparent];
+    }
+
     if (json[@"metalness"]) {
-        material.lightingModelName = SCNLightingModelPhysicallyBased;
-        material.metalness.contents = @([json[@"metalness"] floatValue]);
+        [self setMaterialPropertyContents:json[@"metalness"] material:material.metalness];
     }
-    
+
     if (json[@"roughness"]) {
-        material.lightingModelName = SCNLightingModelPhysicallyBased;
-        material.roughness.contents = @([json[@"roughness"] floatValue]);
+         [self setMaterialPropertyContents:json[@"roughness"] material:material.roughness];
     }
-    
+
     if(json[@"shaders"] ) {
         material.shaderModifiers = json[@"shaders"];
     }
