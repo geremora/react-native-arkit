@@ -133,6 +133,7 @@ export const material = PropTypes.shape({
     metalness: materialProperty,
     roughness: materialProperty,
     transparent: materialProperty,
+    emission:materialProperty,
     blendMode,
     transparencyMode,
     lightingModel,

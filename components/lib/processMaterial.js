@@ -2,7 +2,7 @@ import { processColor } from 'react-native';
 import { isObject, isString, mapValues, set } from 'lodash';
 
 // https://developer.apple.com/documentation/scenekit/scnmaterial
-const propsWithMaps = ['normal', 'diffuse', 'displacement', 'specular', 'metalness', 'roughness', 'transparent'];
+const propsWithMaps = ['normal', 'diffuse', 'displacement', 'specular', 'metalness', 'roughness', 'transparent', 'emission'];
 
 export default function processMaterial(materialOrg) {
   const material = { ...materialOrg };

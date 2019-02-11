@@ -425,6 +425,10 @@
          [self setMaterialPropertyContents:json[@"roughness"] material:material.roughness];
     }
 
+    if (json[@"emission"]) {
+         [self setMaterialPropertyContents:json[@"emission"] material:material.emission];
+    }
+
     if(json[@"shaders"] ) {
         material.shaderModifiers = json[@"shaders"];
     }
